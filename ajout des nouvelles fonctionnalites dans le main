@@ -1,0 +1,89 @@
+#inclQude <stdio.h>
+#include "info.h"
+#include "const.h"
+#define PRINT_STAT_H printf("#########################\n\t\t\\t STATISTIQUES DES ETUDIANTS#####################");
+#define PRINT_MENU_PRINCIPAL printf("\t\t\t\t# # # # # # # # # # # # # # # # # # # # #\n\t\t\t\t# APPLICATION DE GESTION DES ETUDIANTS  #\n\t\t\t\t# # # # # # # # # # # # # # # # # # # # #\n\n\t\t\t\t\t1-Gestion des etudiants\n\n\t\t\t\t\t2-Statistiques\n\n\t\t\t\t\t3-Quitter\n\nVotre choix: ")
+
+int main ()
+{
+    int main_choice,stat_choice,etud_choice;
+    do
+    {
+        PRINT_MENU_PRINCIPAL;
+        scanf("%d", &main_choice);
+        if (main_choice!=1 && main_choice!=2 && main_choice!=3)
+        {
+            system("cls");
+            printf("Choix invalide");
+
+        }
+        if(main_choice==1)
+        {
+            do
+            {
+                PRINT_GESTION;
+                scanf("%d", &etud_choice);
+                switch(etud_choice)
+                {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                default:
+
+                    break;
+
+                }
+
+            }
+            while(etud_choice!=5);
+             system("cls");
+        }
+
+        if (main_choice == 2)
+        {
+            do
+            {
+                PRINT_STAT_H;
+                system("cls");
+                switch(stat_choice)
+                {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                default:
+                    break;
+
+                }
+            }
+            while(stat_choice!=5);
+                system("cls");
+        }
+
+        if (main_choice!=3)
+        {
+
+            printf("voulez vous vraiment quitter ?");
+            printf("1-oui!");
+            printf("2-non");
+            printf("votre choix : ");
+            scanf("%d",&main_choice);
+
+        }
+     while (main_choice!=5);
+       printf("AUREVOIR\n");
+       systeme("pause");
+
+    return 0;
+}
+
+}
